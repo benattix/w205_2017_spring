@@ -1,0 +1,23 @@
+ave my current working directory
+MY_DIR=$(pwd)
+
+# create staging directory
+rm ~/staging/exercise_1/*
+rmdir ~/staging/exercise_1
+rmdir ~/staging/
+
+# remove files from HDFS
+hdfs dfs -rm /user/w205/hospital_compare/hospitals.csv
+hdfs dfs -rm /user/w205/hospital_compare/effective_care.csv
+hdfs dfs -rm /user/w205/hospital_compare/readmissions.csv
+hdfs dfs -rm /user/w205/hospital_compare/Measures.csv
+hdfs dfs -rm /user/w205/hospital_compare/survey_responses.csv
+
+# remove HDFS directory
+hdfs dfs -rmdir /user/w205/hospital_compare
+
+# Change directory
+cd $MY_DIR
+
+exit
+
