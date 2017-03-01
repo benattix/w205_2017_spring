@@ -38,4 +38,3 @@ hdfs dfs -put survey_responses.csv /user/w205/hospital_compare
 cd $MY_DIR
 
 exit
-
