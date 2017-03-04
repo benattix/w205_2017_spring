@@ -21,7 +21,7 @@ WITH SERDEPROPERTIES (
   "escapeChar" = '\\'
 )
 STORED AS TEXTFILE
-LOCATION '/user/w205/hospital_compare'
+LOCATION '/user/w205/hospital_compare/hospitals'
 ;
 
 
@@ -54,7 +54,7 @@ WITH SERDEPROPERTIES (
   "escapeChar" = '\\'
 )
 STORED AS TEXTFILE
-LOCATION '/user/w205/hospital_compare'
+LOCATION '/user/w205/hospital_compare/effective_care'
 ;
 
 
@@ -90,7 +90,7 @@ WITH SERDEPROPERTIES (
   "escapeChar" = '\\'
 )
 STORED AS TEXTFILE
-LOCATION '/user/w205/hospital_compare'
+LOCATION '/user/w205/hospital_compare/readmissions'
 ;
 
 
@@ -113,7 +113,7 @@ WITH SERDEPROPERTIES (
   "escapeChar" = '\\'
 )
 STORED AS TEXTFILE
-LOCATION '/user/w205/hospital_compare'
+LOCATION '/user/w205/hospital_compare/Measures'
 ;
 
 
@@ -162,6 +162,6 @@ WITH SERDEPROPERTIES (
   "escapeChar" = '\\'
 )
 STORED AS TEXTFILE
-LOCATION '/user/w205/hospital_compare'
+LOCATION '/user/w205/hospital_compare/survey_responses'
 ;
 
