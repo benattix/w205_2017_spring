@@ -1,0 +1,17 @@
+3. Which procedures have the greatest variability between hospitals?
+
+Answer:
+St.Dev.   Procedure
+92.3      ED1
+61.96     ED2
+40.66     OP 18
+24.44     Median Time to Transfer to Another Facility for Acute Coronary Intervention
+22.18     Head CT results
+21.05     Thrombolytic Therapy
+17.48     Median time to pain med
+16.89     Door to diagnostic eval
+16.66     Warfarin therapy discharge instructions
+16.33     Healthcare workers given influenza vaccination
+
+
+First I created a table called proc_variability where I did a union between the hospital scores for effective_care procedures and hospital scores for readmission procedures. This allows me to get the variability for all procedures in both tables. Next, I took the standard deviation for the score of each procedure across all hospitals. Finally, I only included procedures which had scores across at least 10 hospitals. I felt 10 observations is big enough to give us some true variability but not too large that it constrains us by limiting how many procedures we're able to choose from.

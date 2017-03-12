@@ -1,0 +1,17 @@
+2. What states are models of high-quality care?
+
+Answer:
+State ProceduresScored  TotalScore AvgScore
+DC      246             25496.0   103
+MD        1206              125301.0    103
+DE        215                21903.0      101
+NY        4771              474464.0    99
+CA        8817              866024.0    98
+NH        531                52196.0      98
+NV        733                72052.0      98
+NJ        2210              217722.0    98
+VI        36                3504.0      97
+CT        920                89378.0      97
+
+For this question, I used the same criteria from question 1 in terms of which procedures to include. The only difference was, I aggregated the answers by state instead of by hospital.
+
