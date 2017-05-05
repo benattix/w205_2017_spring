@@ -1,3 +1,5 @@
+# Final version for grading
+
 # save my current directory
 MY_DIR=$(pwd)
 # create staging directory

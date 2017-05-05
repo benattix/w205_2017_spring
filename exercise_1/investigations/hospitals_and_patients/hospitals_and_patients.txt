@@ -1,0 +1,10 @@
+4. Are average scores for hospital quality or procedural variability correlated with patient survey responses?
+
+Answer:
+BaseScoreCorrelation    OvrRatingCorrelation
+-0.280590464409928      -0.03860078815579833
+
+Looking at the correlation between hospital quality (AvgScore) and two survey measures (base score and overall rating achievement), we see a negative correlation in both cases. The correlation with overall rating achievement is only -0.039 so that is probably negligible, but the magnitude of the correlation with hospital quality and base score is bigger. I would conclude that there is indeed a negative correlation here.
+
+I see no possible way to look at the correlation between procedural variability and patient survey responses. Procedural variability is a measure on the procedure-level (i.e. for a given procedure how much variability is there between hospitals) whereas the survey responses are on a hospital-level (i.e. grading hospitals among several factors). It wouldn't make sense to make correlations across these different data structures.
+

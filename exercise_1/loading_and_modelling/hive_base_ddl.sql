@@ -1,3 +1,5 @@
+--Final version for grading
+
 DROP TABLE hospitals;
 
 CREATE EXTERNAL TABLE hospitals
@@ -130,6 +132,7 @@ CREATE EXTERNAL TABLE survey_responses
   city string,
   state string,
   zip string,
+  county string,
   comm_nurse_achieve string,
   comm_nurse_impr string,
   comm_nurse_dim string,
@@ -153,7 +156,9 @@ CREATE EXTERNAL TABLE survey_responses
   discharge_dim string,
   ovr_rtg_achieve string,
   ovr_rtg_impr string,
-  ovr_rtg_dim string
+  ovr_rtg_dim string,
+  base_score string,
+  consistency_score string
 )
 ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
 WITH SERDEPROPERTIES (

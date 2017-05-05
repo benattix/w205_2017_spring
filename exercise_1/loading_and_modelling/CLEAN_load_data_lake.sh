@@ -1,4 +1,4 @@
-ave my current working directory
+# save my current working directory
 MY_DIR=$(pwd)
 
 # create staging directory

@@ -1,0 +1,18 @@
+1. What hospitals are models of high-quality care? That is, which hospitals have the most consistently high scores for a variety of procedures?
+
+Answer:
+Hospital                  ProceduresScored  TotalScore AvgScore
+HOSP COMUNITARIO BUEN SAMARITANO        15  2576.0     171
+NEWARK BETH ISRAEL MEDICAL CENTER          36    4928.0       136
+HOSPITAL MENONITA DE CAYEY                14    1898.0       135
+HOSPITAL HERMANOS MELENDEZ INC            16    2174.0       135
+PROVIDENT HOSPITAL OF CHICAGO             21    2692.0       128
+KINGS COUNTY HOSPITAL CENTER              37    4643.0       125
+KERN MEDICAL CENTER                       24    3023.0       125
+PHOENIX INDIAN MEDICAL CENTER             11    1368.0       124
+ROSELAND COMMUNITY HOSPITAL               16    1997.0       124
+UNIVERSITY OF MARYLAND MEDICAL CENTER     29    3543.0       122
+
+First, we have 2 datasets which contain procedures (effective_care and readmissions), but after looking at both datasets, I chose to only use effective_care to answer this question. For the readmissions dataset, I looked at the comparison to nation and most hospitals-procedure combinations are either no different than the rest of the nation, have too few cases to tell a difference, or that data is not available. It also appears that the scores are on a different scale than each other so it wouldn't make sense to combine those scores. For both of these reasons, I believe effective_care is sufficient to answer the question.
+
+Next, when creating the table my_effective_care, I only included rows for a given hospital if that hospital performed at least 30 of a certain procedure. I chose to do this because the rule of thumb is samples of at least 30 observations will converge to a normal distribution via the Central Limit Theorem. In other words, samples of at least 30 will normalize around their true mean and are a bit more reliable than smaller samples. In addition, since we want hospitals which have high scores for a variety of procedures, I chose only hospitals which had at least 10 procedures that met the criteria above. Finally, I averaged the scores across procedures for all the hospitals and that is how I came up with my final answer. Another option would have been to give procedures with a higher sample a bigger weight when doing the calculation, but I decided against this option because one procedure with a very high sample could skew the results. Since we want a high scores across many procedures, I felt it made sense to weight each procedure the same.
